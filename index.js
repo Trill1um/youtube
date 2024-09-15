@@ -50,8 +50,10 @@ function disableScroll() {
 let con=false,ind=0
 let moreAppear, moreButton;
 let buttonPosition,buttonX,buttonY,appearX,appearY,appearW,appearH
-function moreShow(index) {
-
+function moreShow(elem) {
+    let videos=Array.from(document.getElementById("videos").children)
+    let vidClicked=elem.parentElement.parentElement.parentElement
+    let index=videos.indexOf(vidClicked)
     moreAppear=document.getElementsByClassName("moreBoxAppears")[index]
     moreButton=document.getElementsByClassName("moreButton")[index]
     if (moreAppear.style.display=="") {
@@ -76,23 +78,31 @@ function moreShow(index) {
             case buttonY-appearH<0&&buttonY+appearH>window.innerHeight:
                 moreAppear.style.left="40px"
                 moreAppear.style.top="-40px"
+                console.log(0)
                 break;
             case buttonY-appearH<0&&buttonY+buttonPosition.height+appearH>window.innerHeight:
                 moreAppear.style.left="40px"
                 moreAppear.style.top="8px"
+                console.log(1)
                 break;
             case buttonY-appearH<0:
                 moreAppear.style.top="48px"
                 moreAppear.style.left="0px"
+                console.log(2)
                 break;
             case buttonY+buttonPosition.height+appearH>window.innerHeight:
                     moreAppear.style.top="-313px"
                     moreAppear.style.left="0px"
+                    console.log(3)
                 break;
         }
         switch (true) {
+            case buttonX+appearW>window.innerWidth&&buttonY-appearH<0&&buttonY+appearH>window.innerHeight||buttonY-appearH<0&&buttonY+buttonPosition.height+appearH>window.innerHeight&&buttonX+appearW>window.innerWidth:
+                moreAppear.style.left="-264px"
+                break;
             case buttonX+appearW>window.innerWidth:
-                moreAppear.style.left="-217px"
+                moreAppear.style.left="-227px"
+                console.log(-1)
                 break;
         }
     } else{
