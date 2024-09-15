@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <link rel="shortcut icon" href="icons/ytIcon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/indexHeader.css">
+    <link rel="stylesheet" href="styles/indexSelector.css">
+    <link rel="stylesheet" href="styles/indexSidebar.css">
+    <link rel="stylesheet" href="styles/indexVideos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="videoConstructor.js"></script>
+    <script src="index.js" defer></script>
+</head>
+<body onload="addVid()">
+    <div id="youtubeHeader">
+        <div id="youtubeStart">
+            <button id="youtubeMore">
+                <img id="ham" src="icons/hamburger.png" alt="">
+            </button>
+            <div id="youtubeLogo">
+                <a href="https://www.youtube.com/"><img id="logo" src="icons/logo.png" alt=""></a>
+                <p id="ytPh">PH</p>
+            </div>
+        </div>
+        <div id="searchBar">
+            <div id="searchBoxContainer">
+                <div id="searchBoxLeftFocus">
+                    <img id="iconSearch" src="icons/search.png" alt="">
+                </div>
+                <input id="searchBox" type="text" placeholder="Search">
+            </div>
+            <button id="searchButton">
+                <img id="search" src="icons/search.png" alt="">
+                <div class="toolTip"><p>Search</p></div>
+            </button>
+            <div id="voiceSearch">
+                <button id="voiceSearchButton">
+                    <img id="mic" src="icons/mic.png" alt="">
+                    <div class="toolTip"><p>Search with your voice</p></div>
+                </button>
+            </div>
+        </div>
+        <div id="accountBox">
+            <button id="create">
+                <img id="cam" src="icons/create.png" alt="">
+                <div class="toolTip"><p>Create</p></div>
+            </button>
+            <button id="notif">
+                <img id="bell" src="icons/bell.png" alt="">
+                <div class="toolTip"><p>Notifications</p></div>
+            </button>
+            <button id="account">
+                <img id="accpic" src="icons/accPic.jpg" alt="">
+            </button>
+        </div>
+    </div>
+    <div id="youtubeContent">
+        <div id="sidebar">
+            <div id="homeBox">
+                <img id="homeIcon" src="icons/home.png" alt="">
+                <p class="pSide">Home</p>
+            </div>
+            <div id="shortsBox">
+                <img id="shortsIcon" src="icons/shorts.png" alt="">
+                <p class="pSide">Shorts</p>
+            </div>
+            <div id="subsBox">
+                <img id="subsIcon" src="icons/subs.png" alt="">
+                <p class="pSide">Subscriptions</p>
+            </div>
+            <div id="musicBox">
+                <img id="musicIcon" src="icons/music.png" alt="">
+                <p class="pSide" id="ytmusic">Youtube Music</p>
+            </div>
+            <div id="youBox">
+                <img id="youIcon" src="icons/you.png" alt="">
+                <p class="pSide">You</p>
+            </div>
+            <div id="dlBox">
+                <img id="dlIcon" src="icons/download.png" alt="">
+                <p class="pSide">Downloads</p>
+            </div>
+        </div>
+        <div id="content">
+            <div id="selector">
+                <div id="selectLeft" class="selectBG">
+                    <div class="selectScroll" onclick="sLeft()"><img id="nextIconLeft" class="nextIcon" src="icons/next.png" alt=""></div>
+                </div>
+                <div id="selection">
+                    <div class="filterSelection" onclick="filterSelect(0)"><p>All</p></div>
+                    <div class="filterSelection" onclick="filterSelect(1)"><p>Gaming</p></div>
+                    <div class="filterSelection" onclick="filterSelect(2)"><p>Music</p></div>
+                    <div class="filterSelection" onclick="filterSelect(3)"><p>Genshin Impact</p></div>
+                    <div class="filterSelection" onclick="filterSelect(4)"><p>Podcasts</p></div>
+                    <div class="filterSelection" onclick="filterSelect(5)"><p>Superhero movies</p></div>
+                    <div class="filterSelection" onclick="filterSelect(6)"><p>Manga</p></div>
+                    <div class="filterSelection" onclick="filterSelect(7)"><p>Live</p></div>
+                    <div class="filterSelection" onclick="filterSelect(8)"><p>News</p></div>
+                    <div class="filterSelection" onclick="filterSelect(9)"><p>Audio commentaries</p></div>
+                    <div class="filterSelection" onclick="filterSelect(10)"><p>Media theories</p></div>
+                    <div class="filterSelection" onclick="filterSelect(11)"><p>Web Development</p></div>
+                    <div class="filterSelection" onclick="filterSelect(12)"><p>Skills</p></div>
+                    <div class="filterSelection" onclick="filterSelect(13)"><p>Minecraft modding</p></div>
+                    <div class="filterSelection" onclick="filterSelect(14)"><p>Variety shows</p></div>
+                    <div class="filterSelection" onclick="filterSelect(15)"><p>Computer programming</p></div>
+                    <div class="filterSelection" onclick="filterSelect(16)"><p>Comedy</p></div>
+                    <div class="filterSelection" onclick="filterSelect(17)"><p>Illustrations</p></div>
+                    <div class="filterSelection" onclick="filterSelect(18)"><p>Recently uploaded</p></div>
+                    <div class="filterSelection" onclick="filterSelect(19)"><p>Watched</p></div>
+                    <div class="filterSelection" onclick="filterSelect(20)"><p>New to you</p></div>
+                </div>
+                <div id="selectRight" class="selectBG">
+                    <div id="scrollRightShadow" class="selectScroll" onclick="sRight()"><img class="nextIcon" src="icons/next.png" alt=""></div>
+                </div>
+            </div>
+            <div id="videos">
+                    <div class="vid">
+                        <a class="thumbnailLink"><div class="thumbnailContainer">
+                            <img class="thumbnail">
+                            <p class="duration"></p>
+                        </div></a>
+                        <div class="info">
+                            <div class="profileBox"><a class="channelLink" id="channelLink1"><img class="profile"></a></div>
+                            <div class="description">
+                                <p class="title"></p> 
+                                <div class="channelNameBox">
+                                    <a class="channelLinkHover channelBox">
+                                        <p class="channelName"></p>
+                                        <div class="channelNameToolTip channelNameHover">asd</div>
+                                    </a>
+                                    <div class="channelBox">
+                                        <img class="check" src="icons/check.png" alt="">
+                                        <div class="channelNameToolTip"><p>Verified</p></div>
+                                    </div>
+                                </div>
+                                <p class="views"></p>
+                            </div>
+                            <div class="details">
+                                <div class="moreBoxAppears">
+                                    <div id="moreBoxAppearsTop">
+                                        <div class="moreBoxAppearsOptions">
+                                            <div class="moreBoxAppearsOptionsIcon"> <img class="queueIcon" src="icons/addToQueue.png" alt=""></div>
+                                            <div class="moreBoxAppearsOptionsLabel"><p>Add to queue</p></div>
+                                        </div>
+                                        <div class="moreBoxAppearsOptions">
+                                            <div class="moreBoxAppearsOptionsIcon"> <img src="icons/watchLater.png" alt=""></div>
+                                            <div class="moreBoxAppearsOptionsLabel"><p>Save to Watch later</p></div>
+                                        </div>
+                                        <div class="moreBoxAppearsOptions">
+                                            <div class="moreBoxAppearsOptionsIcon"> <img src="icons/save.png" alt=""></div>
+                                            <div class="moreBoxAppearsOptionsLabel"><p>Save to playlist</p></div>
+                                        </div>
+                                        <div class="moreBoxAppearsOptions">
+                                            <div class="moreBoxAppearsOptionsIcon"> <img src="icons/download.png" alt=""></div>
+                                            <div class="moreBoxAppearsOptionsLabel"><p>Download</p></div>
+                                        </div>
+                                        <div class="moreBoxAppearsOptions">
+                                            <div class="moreBoxAppearsOptionsIcon"> <img src="icons/share.png" alt=""></div>
+                                            <div class="moreBoxAppearsOptionsLabel"><p>Share</p></div>
+                                        </div>
+                                    </div>
+                                    <div id="moreBoxAppearsBottom">
+                                        <div class="moreBoxAppearsOptions">
+                                            <div id="notInterestedBox" class="moreBoxAppearsOptionsIcon"> <img src="icons/notInterested.png" alt=""></div>
+                                            <div class="moreBoxAppearsOptionsLabel"><p>Not interested</p></div>
+                                        </div>
+                                        <div class="moreBoxAppearsOptions">
+                                            <div id="dontIconBox" class="moreBoxAppearsOptionsIcon"> <img src="icons/dontrecommend.png" alt=""></div>
+                                            <div class="moreBoxAppearsOptionsLabel"><p>Don't recommend channel</p></div>
+                                        </div>
+                                        <div class="moreBoxAppearsOptions">
+                                            <div class="moreBoxAppearsOptionsIcon"> <img src="icons/reportFlag.png" alt=""></div>
+                                            <div class="moreBoxAppearsOptionsLabel"><p>Report</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="moreButton" onclick="moreShow(0)"><img class="moreIcon" src="icons/more.png" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

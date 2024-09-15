@@ -1,0 +1,217 @@
+#youtubeHeader{
+    height: 56px;
+    background-color: #100c0c;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0px;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 16px;
+}
+
+#youtubeStart{
+    display: flex;
+    width: 169px;
+    align-items: center;
+    flex: 0 1;
+}
+
+#searchBar{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex: 1;
+    max-width: 732px;
+    height: 100%;
+}
+
+#searchBoxContainer{
+    background-color: #121212;
+    border: solid 1px #323232;
+    height: 40px;
+    align-items: center;
+    border-radius: 30px 0px 0px 30px;
+    flex: 1;
+    margin-left: 73px;
+    padding-left: 16px;
+}
+
+#searchBox{
+    outline: none;
+    height: 25px;
+    font-size: 15px;
+    background-color: #121212;
+    color: white;
+    border: none;
+    flex: 1;
+    width: 10px;
+}
+
+#accountBox{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color: #100c0c;
+}
+
+#searchBoxContainer:has(#searchBox:focus) {
+    border-color: blue;
+    flex: 1;
+    margin-left: 45px;
+}
+
+#searchBoxContainer:has(#searchBox:focus) #searchBoxLeftFocus{
+    display: flex;
+}
+
+#searchBoxLeftFocus{
+    margin: 0px 5px;
+    align-items: center;
+    display: none;
+    padding: 0;
+}
+
+#iconSearch{
+    width: 18px;
+}
+
+#searchButton{
+    border-left: 0px;
+    height: 41.33px;
+    display: flex;
+}
+
+
+
+#voiceSearchButton{
+    padding: 0;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.1s;
+}
+
+#voiceSearchButton,#create, #notif,#searchButton{
+    position: relative;
+}
+
+#voiceSearchButton:hover,#create:hover, #notif:hover{
+    background-color: #3c3c3c;
+}
+
+#voiceSearchButton:hover .toolTip,#create:hover .toolTip, #notif:hover .toolTip, #searchButton:hover .toolTip{
+    display: block;
+} 
+
+
+.toolTip{
+    position: absolute;
+    top: 55px;
+    background-color: rgba(134, 134, 134, 0.902);
+    border-radius: 5px;
+    padding: 8px 5px;
+    width: max-content;
+    color: white;
+    display: none;
+    transition: opacity 0.3s;
+}
+
+.toolTip:hover{
+    cursor: default;
+}
+
+#voiceSearchButton:has(.toolTip:hover) .toolTip,#searchButton:has(.toolTip:hover) .toolTip,#create:has(.toolTip:hover) .toolTip,#notif:has(.toolTip:hover) .toolTip{
+    opacity: 0;
+}
+
+#mic{
+    width: 60%;
+    height: 60%;
+}
+
+#search{
+    width: 25px;
+    height: 25px;
+    margin: auto;
+}
+
+#ham{
+    width: 20px;
+    width: 20px;
+    padding: 8px;
+}
+
+#logo{
+    width: 100px;
+    height: 22.42px;
+    padding: 17px 16px;
+    cursor: pointer;
+}
+
+#youtubeLogo,#youtubeMore{
+    display: flex;
+    align-items: center;
+}
+#youtubeMore{
+    height: 100%;
+    padding: 3px;
+    margin: 0px;
+    border-radius: 50%;
+}
+#youtubeMore:hover{
+    background-color: #272727;
+}
+#ytPh{
+    margin: 0;
+    position: relative;
+    top: -11px;
+    left: -12px;
+    color: #AAAAAA;
+    font-size: 11px;
+}
+
+#create, #notif,#account{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    outline: none;
+    border: none;
+    background-color: #100c0c;
+    border-radius: 50%;
+    transition: 0.1s;
+    padding: 8px;
+}
+
+#account{
+    width: 45px;
+}
+
+#accpic{
+    border-radius: 50%;
+    width: 100%;
+    padding: 8px 20px;
+}
+
+#cam,#bell{
+    width: 100%;
+}
+
+.check{
+    width: 15px;
+    position: relative;
+    top: 3px;
+}
+
+
+
+
+

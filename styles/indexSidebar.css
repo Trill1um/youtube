@@ -1,0 +1,35 @@
+#sidebar{
+    top: 56px;
+    bottom: 0;
+    position: fixed;
+    min-width: 72px;
+    flex-direction: column;
+    align-items: center;
+    left: 0;
+}
+
+#homeBox, #shortsBox, #subsBox, #musicBox, #youBox, #dlBox{
+    color: white;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 0px;
+    width: 67px;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+#homeIcon, #shortsIcon, #subsIcon, #musicIcon, #youIcon, #dlIcon{
+    width: 23px;
+}
+
+.pSide{
+    margin: 4px 0px;
+    text-align: center;
+}
+
+#homeBox:hover, #shortsBox:hover, #subsBox:hover, #musicBox:hover, #youBox:hover, #dlBox:hover{
+    background-color: #272727;
+    cursor: pointer;
+}

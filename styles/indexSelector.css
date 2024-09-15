@@ -1,0 +1,102 @@
+#selector{
+    height: 56px;
+    position: fixed;
+    top: 56px;
+    z-index: 1;
+    align-items: center;
+    display: flex;
+}
+
+#selection{
+    overflow-x:scroll;
+    scrollbar-width: none;
+    transition: scroll 1s;
+    display: flex;
+    flex: 20;
+    scroll-behavior: smooth;
+}
+
+.filterSelection{
+    background-color: #272727;
+    color: white;
+    min-width: max-content;
+    height: 50%;
+    padding: 8px 14px;
+    margin: 0 10px 0 0px;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: background-color 0.5s;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+}
+
+.filterSelection:nth-child(1){
+    background-color: white;
+    color: #272727;
+}
+
+.filterSelection:nth-child(1):hover{
+    background-color: white;
+}
+
+.filterSelection:hover{
+    background-color: #3f3f3f;
+}
+
+.selectScroll{
+    z-index: 2;
+    background-color: #0f0f0f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 25px 0px 22px 5px black;
+    transition: width 1s;
+    position: absolute;
+}
+
+.filterSelection:nth-child(21){
+    margin-right: 0;
+}
+
+.selectBG{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+#scrollRightShadow{
+    box-shadow: -30px 0px 22px 5px black;
+}
+
+#nextIconLeft{
+    transform: scaleX(-1);
+}
+
+#selectLeft{
+    display: none;
+}
+
+.nextIcon{
+    width: 20px;
+    user-select: none;
+}
+
+.selectScroll:hover{
+    background-color: #3f3f3f;
+}
+
+.selectScroll:active{
+    background-color: #535353;
+}
+
+.selectScroll:focus{
+    background-color: red;
+}

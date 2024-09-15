@@ -1,0 +1,235 @@
+#videos{
+    padding-top: 24px;
+    display: grid;
+    column-gap: 15px;
+    row-gap: 35px;
+    margin: 0px 24px;
+}
+
+.thumbnailContainer{
+    position: relative;
+    max-height: fit-content;
+}
+
+.thumbnail{
+    width: 100%;
+    border-radius: 15px;
+    margin: 0;
+}
+
+.duration{
+    position: absolute;
+    right: 8px;
+    bottom: 12px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    width: max-content;
+    padding: 3px 4px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.vid:hover{
+    cursor: pointer;
+}
+
+.vid{
+    border: solid #100c0c 1px;
+    padding: 2px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    height: max-content;
+}
+
+.details{
+    position: relative;
+}
+
+.details{
+    font-family: arial;
+}
+
+.details:has(.moreButton:active){
+    font-family: sans-serif;
+}
+
+.vid:active, .moreButton:active{
+    background-color: #272727;
+}
+
+.vid:has(.moreButton:active){
+    background-color: #100c0c;
+}
+
+.thumbnailContainer, .info, .description, .profileBox, .details{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.profileBox{
+    display: flex;
+}
+
+.info{
+    display: grid;
+    grid-template-columns: 36px 1fr 8%;
+    background: none;
+}
+
+.profile{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.description{
+    color: #AAAAAA;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+#channelLink1{
+    height: 36px;
+    margin-top: 5px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.channelName:hover{
+    color: white;
+}
+
+.channelName:hover~.channelNameToolTip{
+    display: block;
+}
+
+.check:hover~.channelNameToolTip{
+    display: block;
+}
+
+.channelNameToolTip{
+    background-color: #606060da;
+    position: absolute;
+    top: -55px;
+    padding: 8px;
+    border-radius: 5px;
+    min-width: max-content;
+    color: white;
+    display: none;
+}
+
+.channelNameBox{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.channelName{
+    display: inline-block;
+}
+
+.check{
+    margin-left: 5px;
+}
+
+.channelBox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: max-content;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.title{
+    color: white;
+    font-weight: bold;
+    min-height: max-content;
+    line-height: normal;
+    font-size: 16px;
+    margin: 5px 0px;
+}
+
+.moreBoxAppears{
+    width: 257px;
+    height:321px;
+    border-radius: 10px;
+    position: absolute;
+    top: -313px;
+    z-index: 2;
+    display: grid;
+    background-color: #282828;
+    display: none;
+}
+
+.moreButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    right: -8px;
+    padding: 0px 10px;
+}
+
+.moreIcon{
+    height: 25px;
+    width: 8px;
+}
+
+.moreBoxAppearsOptions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #100c0c00;
+    height: 36px;
+}
+
+.moreBoxAppearsOptionsLabel{
+    color: white;
+    flex: 1;
+    margin-left: 19px;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.moreBoxAppearsOptionsIcon{
+    width: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.queueIcon{
+    transform: scaleY(-1);
+}
+
+#dontIconBox{
+    background-color: white;
+    border-radius: 50%;
+}
+
+#notInterestedBox{
+    transform: scaleX(-1);
+}
+
+#moreBoxAppearsTop, #moreBoxAppearsBottom{
+    background-color: #100c0c00;
+    padding: 0 18px;
+}
+
+#moreBoxAppearsTop{
+    padding-top: 8px;
+    padding-bottom: 3px;
+    border-bottom: solid 1px #565656;
+}
+
+#moreBoxAppearsBottom{
+    padding-bottom: 8px;
+    padding-top: 3px;
+}
