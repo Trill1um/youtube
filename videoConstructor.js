@@ -135,8 +135,8 @@ let youtubers=[
     [
         "thumbnails/ani1.webp",
         "channelProfile/ani.jpg",
-        "Alan Becker",
-        "Alan Becker",
+        "アニプレックス チャンネル",
+        "アニプレックス チャンネル",
         "「TO BE HERO X」コンセプトムービー（Long ver.）／bilibili × Aniplex 新プロジェクト",
         "223K views &#8226; 1 year ago",
         "6:08",
